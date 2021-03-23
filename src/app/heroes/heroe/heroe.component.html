@@ -1,0 +1,33 @@
+<!-- <h1>Heroe Component Works</h1> -->
+<h1>{{ nombre }}</h1>
+
+<dl>
+    <td>Nombre:</td>
+    <dd> {{nombre}} </dd>
+
+    <td>Edad:</td>
+    <dd> {{edad}} </dd>
+
+    <td>Función:</td>
+    <dd> {{obtenerNombre()}} </dd>
+
+    <td>Capitalizado:</td>
+    <dd> {{nombreCapitalizado}} </dd>
+</dl>
+
+<!-- 8. One Way Data Binding - Enlazado de una sola vía. -->
+
+<button (click)="cambiarNombre()">
+    Cambiar Heroe
+</button>
+
+<button (click)="cambiarEdad()">
+    Cambiar Edad
+</button>
+
+<!--
+9. Crear componente de forma automática 
+Explicar como se hace un componente de forma manual y luego generar el automático
+ng generate component heroes/listado
+ng g c heroes/listado
+-->

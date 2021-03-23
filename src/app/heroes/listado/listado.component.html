@@ -1,0 +1,46 @@
+<p>Listado de Heroes</p>
+<ul>
+    <!-- <li>Item 1</li>
+    <li>Item 1</li>
+    <li>Item 1</li> -->
+
+    <!-- <li>{{heroes[0]}}</li>
+    <li>{{heroes[1]}}</li>
+    <li>{{heroes[2]}}</li> -->
+
+    <!-- 10*, 11*, 12* Directivas Estructurales ngFor, ngIF, Ng-Template y ngIf-else -->
+    <li *ngFor="let heroe of heroes; let i = index">
+        {{i + 1}} - {{ heroe }}
+    </li>
+</ul>
+
+
+<div *ngIf="heroeBorrado; else noBorrado">
+    <h3>Héroe borrado <small>{{heroeBorrado}}</small></h3>
+</div>
+
+<!-- <div *ngIf="!heroeBorrado">
+    <h3>No ha borrado nada.</h3>
+</div> -->
+
+<!-- Referencia local por simbolo de numeral#, es algo que solo existe del lado del template -->
+<ng-template #noBorrado>
+    <h3>No ha borrado nada.</h3>
+</ng-template>
+
+<!-- 13**
+Módulos: El objetivo de los módulos es ayudarnos a agrupar componentes y 
+piezas de nuestra aplicación que tienen sentido entre si.
+Objetivos de los módulos:
+1.- Encapsular las cosas
+2.- Ayudarnos con la carga perezosa.
+Crear un módulo que nos permita agrupar todo lo relacionado a Heroes.
+14 ** Contador segunda parte:
+//Tarea: Crear un módulo llamado ContadorModule
+//declaraciones y exportaciones
+-->
+
+
+<button (click)="borrarHeroe()">
+    Borrar 
+</button>
